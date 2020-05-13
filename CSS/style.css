@@ -8,23 +8,37 @@ body {
     background: #485673;
     font-family: Arial;
     height: 100vh;
+    font-size: 14px;
   }
 
-  /* se a tela tiver pelo menos 400 px, vai carregar estes estilos*/
-  @media (min-width: 400px) {
-  body {
-      font-size: 14px;
-      
+    /* se a tela tiver pelo menos 400 px, vai carregar estes estilos*/
+  @media (min-width: 150px) {
+    body {
+      font-size: 20px;
+      }
+    header {
+      align-items: center;
+      background-image: url('../img/mobile\ -\ Skyview\ to\ the\ West\ -\ View\ from\ the\ 17th\ floor\ of\ the\ Canada\ Life\ building_\ Doors\ Open\ Toronto\ 2017.jpg');
+      display: flex;
+      height: 75vh;
+      justify-content: center;
+     }
   }
-
-header {
-  height: 75vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('../img/Skyview\ to\ the\ West\ -\ View\ from\ the\ 17th\ floor\ of\ the\ Canada\ Life\ building_\ Doors\ Open\ Toronto\ 2017.jpg');
+  
+  @media (min-width: 600px) {
+    body {
+      font-size: 35px;
+    } 
+    header {
+      align-items: center;
+      background-image: url('../img/Crop\ -\ Skyview\ to\ the\ West\ -\ View\ from\ the\ 17th\ floor\ of\ the\ Canada\ Life\ building_\ Doors\ Open\ Toronto\ 2017.jpg');
+      display: flex;
+      height: 75vh;
+      width: auto;
+      justify-content: center;
+    }
   }
-
+  
   .menu {
     background-color: #2B3040; 
     position: fixed;
@@ -44,7 +58,6 @@ header {
   .menu a {
     display: block;
     padding: 10px 20px;
-    --background: aqua;
   }
   
   a {
