@@ -25,23 +25,26 @@ body {
   /* se a tela tiver pelo menos 320 px, vai carregar estes estilos*/
   @media (min-width: 320px) {
     body {
-      font-size: 5px;
-      }
+      font-size: 10px;
     }
+  }
 
-  /* breakpoint de 600 px*/
+  /* breakpoint de 600 px */
   @media (min-width: 600px) {
     body {
       font-size: 20px;
-      } 
-    }
+    } 
+  }
     
   /* breakpoint de 1200 px */
-  @media (min-width: 1.200px) {
+  @media (min-width: 1200px) {
     body {
       font-size: 40px;
-      }
     }
+    .portfolio {
+      font-size: 20px;
+    }
+  }
   
   .menu {
     background-color: #09213D; 
@@ -78,9 +81,46 @@ body {
   .site-title {
     color:whitesmoke;
     text-align: center;
-    }
-  
-  .img-portfolio {
-    height: 180px;
-    width: 180px;
   }
+  
+  .portfolio {
+    padding: 2em;
+    height: 100vh;
+    color:#A697A1;
+  }
+
+  .portfolio h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+  }
+
+  @media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  object-position: left bottom;
+}
